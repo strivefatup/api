@@ -95,7 +95,7 @@ import (
 )
 
 func Order(engine *gin.Engine){
-	route := engine.Group("/api")
+    route := engine.Group("/api")
     {
         route.GET("/order", order.GetOrderList)
         route.GET("/order/:id", order.GetOrderById)
