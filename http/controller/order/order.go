@@ -1,6 +1,7 @@
 package order
 
 import (
+	"fmt"
 	"strconv"
 	"api/config"
 	"encoding/json"
@@ -29,12 +30,13 @@ func GetOrderList(c *gin.Context) {
 }
 
 func GetOrderById(c *gin.Context) {
-	id, _ := strconv.Atoi(c.Param("id"))
-	if data, err := order.Show(uint(id)); err != nil {
-		c.JSON(404, gin.H{"message": "record not found"})
-	} else {
-		c.JSON(200, data)
-	}
+	// fmt.Printf("%d", c.Param("id"))
+	// id, _ := strconv.Atoi(c.Param("id"))
+	// if data, err := order.Show(uint(id)); err != nil {
+	// 	c.JSON(404, gin.H{"message": "record not found"})
+	// } else {
+	// 	c.JSON(200, data)
+	// }
 }
 
 func CreateOrder(c *gin.Context) {
@@ -46,15 +48,16 @@ func CreateOrder(c *gin.Context) {
 }
 
 func UpdateOrder(c *gin.Context) {
-	id, _ := strconv.Atoi(c.Param("id"))
-	var param Order
-	c.Bind(&param)
-	data, _ := json.Marshal(param)
-	if result, err := order.Update(uint(id), data); err != nil {
-		c.JSON(404, gin.H{"message": "record not found"})
-	} else {
-		c.JSON(201, result)
-	}
+	fmt.Printf("%d", c.Param("id"))
+	// id, _ := strconv.Atoi(c.Param("id"))
+	// var param Order
+	// c.Bind(&param)
+	// data, _ := json.Marshal(param)
+	// if result, err := order.Update(uint(id), data); err != nil {
+	// 	c.JSON(404, gin.H{"message": "record not found"})
+	// } else {
+	// 	c.JSON(201, result)
+	// }
 }
 
 func DeleteOrderById(c *gin.Context) {

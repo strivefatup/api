@@ -1,0 +1,13 @@
+# 签名
+secret: "7kD7odtOPdNRfDARuTdwSB1EEzDbKAIpPm6fX6Ab8a8="
+# 过期时间,毫秒数
+exp: 86399
+# 签发人
+iss: "strivefatup-api"
+# 主题
+sub: "api"
+# 受众
+aud: "client"
+
+# 密码加盐
+salt: "AIpPm6fX6Ab8"

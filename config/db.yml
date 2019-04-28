@@ -3,5 +3,5 @@ mysql:
         host:     "127.0.0.1"
         port:      3306
         dbname:   "testDB"
-        username:  "username"
-        password: "password"
+        username:  "remote"
+        password: "123456"
